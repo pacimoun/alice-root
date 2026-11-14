@@ -1,0 +1,7 @@
+{
+  "name": "alice-root-checks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "test": "node tests/soundcloud-dom.cjs" },
+  "devDependencies": { "linkedom": "0.18.12" }
+}

@@ -1,0 +1,32 @@
+# Скопируйте в config.local.toml (игнорируется Git), заполните свои значения.
+[station]
+host = "STATION_HOST"
+port = 2222
+user = "root"
+identity = "~/.ssh/alice_station_ed25519"
+bluetooth_mac = "AA:BB:CC:DD:EE:FF"
+model = "yandexmini_2"
+firmware = "0.369.1.46.4778262943.20261013.299"
+abi = "armhf"
+
+# Необязательные пути. Без overrides используются XDG и Path.home().
+# [paths]
+# data = "~/.local/share/alice-root"
+# state = "~/.local/state/alice-root"
+# cache = "~/.cache/alice-root"
+# backup = "~/.local/state/alice-root/backups"
+# bridge = "~/.local/share/alisa-voice"
+# bridge_state = "~/.local/state/alisa-voice"
+# bin = "~/.local/bin"
+# unit = "~/.config/systemd/user/alisa-voice-bridge.service"
+# [soundcloud]
+# profile = "~/.local/state/verity/soundcloud"
+# state = "~/.local/state/verity/soundcloud-control"
+
+# Только для подготовки НОВОЙ колонки: python3 scripts/rooting.py
+[rooting]
+pc_ip = "PC_LAN_IP"
+router_ip = "ROUTER_LAN_IP"
+wifi_mac = "AA:BB:CC:DD:EE:FF" # Wi-Fi MAC; Bluetooth MAC находится выше
+firewall_zone = "" # пусто = определить по интерфейсу с pc_ip
+# firmware_file = "/ABSOLUTE/PATH/mini2.zip" # необязательно, есть автоматическая загрузка
